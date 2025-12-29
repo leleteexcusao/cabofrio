@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursão para Cabo Frio - Dias de Descanso e Férias Inesquecíveis</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0077be;
+            --secondary-blue: #00d4ff;
+            --sand: #f4e4bc;
+            --white: #ffffff;
+            --text-dark: #2c3e50;
+            --text-light: #ecf0f1;
+            --accent-orange: #ff9f43;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            background: #0077be url('https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Info Section */
+        .info-section {
+            padding: 60px 0;
+            background-color: var(--sand);
+            text-align: center;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .info-card i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        /* Included Section */
+        .included {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .included h2 {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .included-item {
+            padding: 20px;
+            border-radius: 10px;
+            background: #f0f8ff;
+            transition: transform 0.3s ease;
+        }
+
+        .included-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .included-item i {
+            font-size: 2rem;
+            color: var(--secondary-blue);
+            margin-bottom: 10px;
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 119, 190, 0.8), rgba(0, 119, 190, 0.8)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1353&q=80') center center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .experience-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .experience h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .experience p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Important Notice */
+        .notice {
+            padding: 40px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .notice p {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        /* CTA Button */
+        .cta-container {
+            padding: 40px 0 100px;
+            text-align: center;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+            transform: scale(1.05);
+        }
+
+        .btn-whatsapp i {
+            margin-right: 10px;
+        }
+
+        /* Fixed Mobile CTA */
+        .fixed-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .fixed-cta {
+                display: block;
+            }
+            .fixed-cta .btn-whatsapp {
+                display: block;
+                padding: 15px;
+                font-size: 1.1rem;
+                width: 100%;
+            }
+            .cta-container {
+                padding-bottom: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Excursão para Cabo Frio</h1>
+            <p>Dias de descanso, mar azul e momentos inesquecíveis te esperam.</p>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-bus"></i>
+                    <h3>Saída</h3>
+                    <p>Piumhi – 09/01/2026</p>
+                    <p><strong>Horário: 16h</strong></p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Retorno</h3>
+                    <p>15/01/2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Included Section -->
+    <section class="included">
+        <div class="container">
+            <h2>O que está incluso</h2>
+            <div class="included-grid">
+                <div class="included-item">
+                    <i class="fas fa-home"></i>
+                    <p>Hospedagem em casa com suíte</p>
+                </div>
+                <div class="included-item">
+                    <i class="fas fa-coffee"></i>
+                    <p>Café da manhã</p>
+                </div>
+                <div class="included-item">
+                    <i class="fas fa-utensils"></i>
+                    <p>Jantar</p>
+                </div>
+                <div class="included-item">
+                    <i class="fas fa-wifi"></i>
+                    <p>Wi-Fi</p>
+                </div>
+                <div class="included-item">
+                    <i class="fas fa-shuttle-van"></i>
+                    <p>Transporte ida e volta</p>
+                </div>
+                <div class="included-item">
+                    <i class="fas fa-gift"></i>
+                    <p>Sorteio de brindes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <div class="experience-content">
+                <h2>A Experiência Perfeita</h2>
+                <p>Prepare-se para o <strong>descanso</strong> que você merece. Aproveite o melhor <strong>clima de férias</strong> em praias paradisíacas.</p>
+                <p>Desfrute de todo o <strong>conforto</strong> e a alegria de uma <strong>viagem em grupo</strong>, repleta de <strong>diversão e tranquilidade</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Notice -->
+    <section class="notice">
+        <div class="container">
+            <p>Aviso: Favor levar roupa de cama, toalha, travesseiro, fronha, lençol e coberta.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-container">
+        <div class="container">
+            <a href="https://wa.me/5537998392002" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> Quero saber os detalhes no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Fixed Mobile CTA -->
+    <div class="fixed-cta">
+        <a href="https://wa.me/5537998392002" class="btn-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> Detalhes no WhatsApp
+        </a>
+    </div>
+
+</body>
+</html>
